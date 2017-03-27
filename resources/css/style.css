@@ -1,8 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* Mobile first */
 html, body {
-	
+	font-size:12px;
 }
 
 .main-content {
@@ -10,7 +11,7 @@ html, body {
 }
 
 .container {
-	
+	width: 100%;
 }
 
 .flex-container {
@@ -39,7 +40,6 @@ ul li {
 	
 }
 
-/*Header mobile*/
 header {
 	width: 100%;
 	height: 64px;
@@ -49,21 +49,63 @@ nav {
 	padding: 1rem;
 }
 
-.nav-mobile {
-	display:flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
 section {
-	
+	width: 100%;
+	display: block;
 }
 
 footer {
 	
 }
 
-/* containers */
+/*Header - mobile*/
+.nav-mobile {
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+}
 
+/*banner -mobile */
 
+.banner {
+	background-color: silver;
+}
 
+.banner-img {
+	position: relative;
+	height: 180px;
+	width: 100%
+}
+
+.banner-img img {
+	height:100%;
+	width:100%;
+}
+
+.banner-info {
+	position: relative;
+	padding: 32px 16px;
+	
+	
+}
+
+.banner-info h1 {
+	font-size: 3rem;
+	margin-bottom: 32px;
+}
+
+.banner-info h2 {
+	font-size: 2rem;
+	margin-bottom: 24px;
+}
+
+.banner-start {
+	background-color: gray;
+	font-size: 1.5rem;
+	color:white;
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 1.2em 0;
+}
+	
