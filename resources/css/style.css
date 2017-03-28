@@ -109,3 +109,39 @@ footer {
 	padding: 1.2em 0;
 }
 	
+/* features section */
+#featured {
+	background-color: ghostwhite;
+}
+
+.features {
+	margin: 0 auto;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.feature .mobile-img {
+	padding: 1.5em;
+}
+
+.feature-text {
+	padding-left: 2.5em;
+}
+
+.feature-text h2 {
+	font-size: 3rem;
+	padding: 0.5em;
+}
+
+.feature-text p {
+	font-size: 2rem;
+	padding: 0.5em;
+}
+
+.feature-text .read {
+	font-size: 2rem;
+	color: lightblue;
+	padding: 0.5em;
+}
