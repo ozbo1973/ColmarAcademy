@@ -202,27 +202,27 @@ footer .heading p {
 	
 
 /* ##### DESKTOP #### */
-@media only screen and (min-width:500px) {
+@media only screen and (min-width:850px) {
 	/* elements */
 	html, body {
 		font-size:16px;
 	}
 	
-	.flex-center {
+	/*.flex-center {
 		display: flex;
 		justify-content: center;
-/*		align-items: center;*/
-	}
+		align-items: center;
+	}*/
 	
 	/*nav and header - DESKTOP */
-	header {
+	/*header {
 		height: 64px;
-	}
+		display: fixed;
+	}*/
 
-	nav {
+	/*nav {
 		padding: 1rem;
-	/*	border: 2px black dashed;*/
-	}
+	}*/
 
 	.nav-mobile {
 		display:none;
@@ -232,21 +232,21 @@ footer .heading p {
 		display:flex;
 		justify-content: flex-start;
 		align-items: center;
-		padding-left: 24px;
+		padding-left: 1.5rem;
 		/*border: 2px red dashed;*/
 		width: 45%;
 	}
 	
 	.logo img{
-		height: 32px;
-		width: 32px;
-		padding-right: 15px;
+		height: 2rem;
+		width: 2rem;
+		padding-right: 1rem;
 	}
 		
 	.nav-desktop {
 		display:flex;
 		justify-content: center;
-		border: 2px black dashed;
+		/*border: 2px black dashed;*/
 	}
 	
 	.nav-desktop ul {
@@ -258,16 +258,61 @@ footer .heading p {
 	}
 	
 	.nav-desktop ul li{
-		padding: 	0 16px;
+		padding: 	0 1rem;
+	}
+	
+	.nav-desktop li a{
+		font-size: 1.5rem;
+		text-decoration: none;
 	}
 	
 	.logo-text {
-		font-size:36px;
+		font-size:1.5rem;
 	}
 	
 	.logo-text span {
-		color: brown;
+		color: darkgray;
 	}
+	
+/*banner -DESK */
+	.banner {
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.banner-img {
+		width: 60%;
+		padding: 2rem 2.5rem 2rem 1.5rem;
+		height: auto;
+	}
+	
+	.banner-info {
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-top: 2rem;
+	}
+
+	.banner-info h1 {
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+		width: 80%;
+	}
+
+	.banner-info h2 {
+		font-size: 1.5rem;
+		margin-bottom: 1.5rem;
+		width: 80%;
+	}
+
+	.banner-start {
+		/*width: 100%;*/
+		padding: 0.5rem 0;
+}
+
+		
+	
 	
 }
 
