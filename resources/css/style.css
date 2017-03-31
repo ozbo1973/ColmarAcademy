@@ -1,6 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
+
 /* Mobile first */
 html, body {
 	font-size:12px;
@@ -32,6 +33,10 @@ section {
 	display: block;
 }
 
+/*hidden for desk*/
+.nav-desktop,.logo,.features-desktop, .desk-img {
+	display:none;
+}
 
 /*Header - MOBILE*/
 .nav-mobile {
@@ -40,9 +45,6 @@ section {
 	align-items: center;
 }
 
-.nav-desktop,.logo {
-	display:none;
-}
 
 /*banner -MOBILE */
 
@@ -208,6 +210,10 @@ footer .heading p {
 		font-size:16px;
 	}
 	
+	/*hidden mobile */
+	.nav-mobile, .mobile-img {
+		display:none;
+	}
 	/*.flex-center {
 		display: flex;
 		justify-content: center;
@@ -223,10 +229,6 @@ footer .heading p {
 	/*nav {
 		padding: 1rem;
 	}*/
-
-	.nav-mobile {
-		display:none;
-	}
 	
 	.logo {
 		display:flex;
@@ -310,6 +312,62 @@ footer .heading p {
 		/*width: 100%;*/
 		padding: 0.5rem 0;
 }
+
+/* features section -DESK */
+	#featured {
+		display: flex;
+		flex-direction:row;
+		height: 600px;
+	}
+	
+	.features-desktop {
+		display:flex;
+		flex-direction:column;
+		padding:2rem 1.5rem;
+		width:55%;
+		
+	}
+	
+	.features-desktop img {
+		overflow:hidden;
+	}
+	
+	.features-desktop .heading h1 {
+		font-size: 3rem;
+		padding: 2rem 0 1.5rem 0;
+	}
+		
+	.features-desktop .heading h5 {
+		padding-top:2rem;
+	}
+	
+	.desk-img {
+		display: inline;
+		padding: 1rem;
+		width:35%;
+		/*height: 100%;*/
+	}
+
+
+	.feature {
+		display: flex;
+		flex-direction: row;
+		padding:0;
+		align-items:center;
+		
+	}
+	
+	.feature-text {
+		padding-left: 0;
+	}
+
+	.feature-text h2 {
+		font-size: 1.5rem;
+	}
+
+	.feature-text p, .feature-text .read {
+		font-size: 1rem;
+	}
 
 		
 	
