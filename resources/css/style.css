@@ -34,7 +34,7 @@ section {
 }
 
 /*hidden for desk*/
-.nav-desktop,.logo,.features-desktop, .desk-img {
+.nav-desktop,.logo,.features-desktop, .desk-img, .desk {
 	display:none;
 }
 
@@ -211,7 +211,7 @@ footer .heading p {
 	}
 	
 	/*hidden mobile */
-	.nav-mobile, .mobile-img {
+	.nav-mobile, .mobile-img,#start-learning-mobile {
 		display:none;
 	}
 	/*.flex-center {
@@ -369,6 +369,38 @@ footer .heading p {
 		font-size: 1rem;
 	}
 
+	/* courses DESK */
+	.courses {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem;
+}
+
+.courses .heading {
+	padding-top: 2.4rem;
+	padding-bottom: 1.2rem;
+	text-align: center;
+	width: 100%;
+}
+
+.courses .heading h1{
+		font-size:4rem;
+}
+
+.course {
+	margin: 0 2rem 1rem 2rem;
+	padding: 4rem;
+	background-color: lightgray;
+	width: 65%;
+}
+
+.course h2 {
+	font-size: 3rem;
+	padding-left: 2rem;
+}
 		
 	
 	
