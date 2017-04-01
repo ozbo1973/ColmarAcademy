@@ -16,10 +16,6 @@ html, body {
 	position: relative;
 }
 
-.flex-container {
-	
-}
-
 header {
 	height: 64px;
 }
@@ -34,7 +30,7 @@ section {
 }
 
 /*hidden for desk*/
-.nav-desktop,.logo,.features-desktop, .desk-img, .desk {
+.nav-desktop,.logo,.features-desktop, .desk-img, .course img, .course .course-content {
 	display:none;
 }
 
@@ -143,14 +139,14 @@ section {
 	padding: 2rem;
 }
 
-.courses .heading {
+#start-learning .heading {
 	padding-top: 2.4rem;
 	padding-bottom: 1.2rem;
 	text-align: center;
 	width: 100%;
 }
 
-.courses .heading h1{
+#start-learning .heading h1{
 		font-size:4rem;
 }
 
@@ -168,7 +164,7 @@ section {
 
 /* Thesis exhibits */
 #thesis-exhibits {
-	background-color: lightgray;
+	background-color: ghostwhite;
 }
 .exhibits {
 	display: flex;
@@ -204,14 +200,14 @@ footer .heading p {
 	
 
 /* ##### DESKTOP #### */
-@media only screen and (min-width:850px) {
+@media only screen and (min-width:767px) {
 	/* elements */
 	html, body {
 		font-size:16px;
 	}
 	
 	/*hidden mobile */
-	.nav-mobile, .mobile-img,#start-learning-mobile {
+	.nav-mobile, .mobile-img {
 		display:none;
 	}
 	/*.flex-center {
@@ -369,38 +365,65 @@ footer .heading p {
 		font-size: 1rem;
 	}
 
-	/* courses DESK */
+	/*Course Desktop*/
+	#start-learning {
+		background-color: lightgray;
+		padding-bottom: 2rem;
+	}
+	
 	.courses {
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	padding: 2rem;
-}
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap:wrap;
+		padding: 0;
+		width: 80%;
+	}
 
-.courses .heading {
-	padding-top: 2.4rem;
-	padding-bottom: 1.2rem;
-	text-align: center;
-	width: 100%;
-}
+	#start-learning .heading {
+		padding: 2rem 0;
+		text-align: center;
+		width: 100%;
+	}
 
-.courses .heading h1{
+	#start-learning  .heading h1{
 		font-size:4rem;
-}
+	}
 
-.course {
-	margin: 0 2rem 1rem 2rem;
-	padding: 4rem;
-	background-color: lightgray;
-	width: 65%;
-}
-
-.course h2 {
-	font-size: 3rem;
-	padding-left: 2rem;
-}
+	.course {
+		display: flex;
+		flex-direction: column;
+		margin: 0.5rem;
+		padding:0;
+		background-color: white;
+		width: 25%;
+		height:250px;
+	}
+	
+	.course img {
+		display:block;
+		height:35%;
+		width:100%;
+	}
+	
+	.course h2 {
+		margin-top: 1rem;
+		font-size: 1.5rem;
+		padding-left: 0.5rem;
+	}
+	
+	.course .course-content{
+		display:block;
+		padding: 0.5rem 1rem 1rem 1.5rem;
+		font-size: 1em;
+		color: darkgray;
+	}
+		
+	.course-content h3 {
+		font-size: 1em;
+		text-transform: uppercase;
+		padding: 0.5em 0;
+	}
 		
 	
 	
