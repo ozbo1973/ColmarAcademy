@@ -1,7 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-
 /* Mobile first */
 html, body {
 	font-size:12px;
@@ -29,10 +28,19 @@ section {
 	display: block;
 }
 
-/*hidden for desk*/
-.nav-desktop,.logo,.features-desktop, .desk-img, .course img, .course .course-content {
-	display:none;
+section .headings-main {
+	padding-top: 2.4rem;
+	padding-bottom: 1.2rem;
+	text-align: center;
+	width: 100%;
 }
+
+section .headings-main h1{
+		font-size:4rem;
+}
+
+
+
 
 /*Header - MOBILE*/
 .nav-mobile {
@@ -128,7 +136,7 @@ section {
 	padding: 0.5em;
 }
 
-/*courses section */
+/*courses section MOBILE */
 
 .courses {
 	margin: 0 auto;
@@ -137,17 +145,6 @@ section {
 	justify-content: space-between;
 	align-items: center;
 	padding: 2rem;
-}
-
-#start-learning .heading {
-	padding-top: 2.4rem;
-	padding-bottom: 1.2rem;
-	text-align: center;
-	width: 100%;
-}
-
-#start-learning .heading h1{
-		font-size:4rem;
 }
 
 .course {
@@ -162,21 +159,15 @@ section {
 	padding-left: 2rem;
 }
 
-/* Thesis exhibits */
+/* Thesis exhibits MOBILE */
 #thesis-exhibits {
 	background-color: ghostwhite;
 }
 .exhibits {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.exhibits .heading h1 {
-	font-size: 4.5rem;
-	padding:3.5rem 0;
-	width: 100%;
+	flex-direction: row;
+/*	justify-content: center;
+	align-items: center;*/
 }
 
 video {
@@ -197,7 +188,15 @@ footer .heading {
 footer .heading p {
 	padding-left: 2.5em;
 }
+
+@media only screen and (max-width:767px){
+	/*hidden for desk*/
+	.nav-desktop,.logo,.features-desktop, .desk-img, .course img, .course .course-content, .desk-only {
+		display:none;
+	}
 	
+}
+
 
 /* ##### DESKTOP #### */
 @media only screen and (min-width:767px) {
@@ -210,28 +209,21 @@ footer .heading p {
 	.nav-mobile, .mobile-img {
 		display:none;
 	}
-	/*.flex-center {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}*/
 	
-	/*nav and header - DESKTOP */
-	/*header {
-		height: 64px;
-		display: fixed;
-	}*/
+	/*resize headings*/
+	section .headings-main {
+		padding-top: 2rem 0;
+	}
 
-	/*nav {
-		padding: 1rem;
-	}*/
+	section .headings-main h1{
+		font-size:2rem;
+	}
 	
 	.logo {
 		display:flex;
 		justify-content: flex-start;
 		align-items: center;
 		padding-left: 1.5rem;
-		/*border: 2px red dashed;*/
 		width: 45%;
 	}
 	
@@ -244,7 +236,6 @@ footer .heading p {
 	.nav-desktop {
 		display:flex;
 		justify-content: center;
-		/*border: 2px black dashed;*/
 	}
 	
 	.nav-desktop ul {
@@ -252,7 +243,6 @@ footer .heading p {
 		justify-content:flex-end;
 		align-items: center;
 		width: 100%;
-		/*border: 2px green dashed;*/
 	}
 	
 	.nav-desktop ul li{
@@ -305,7 +295,6 @@ footer .heading p {
 	}
 
 	.banner-start {
-		/*width: 100%;*/
 		padding: 0.5rem 0;
 }
 
@@ -321,7 +310,6 @@ footer .heading p {
 		flex-direction:column;
 		padding:2rem 1.5rem;
 		width:55%;
-		
 	}
 	
 	.features-desktop img {
@@ -341,7 +329,6 @@ footer .heading p {
 		display: inline;
 		padding: 1rem;
 		width:35%;
-		/*height: 100%;*/
 	}
 
 
@@ -380,16 +367,6 @@ footer .heading p {
 		width: 80%;
 	}
 
-	#start-learning .heading {
-		padding: 2rem 0;
-		text-align: center;
-		width: 100%;
-	}
-
-	#start-learning  .heading h1{
-		font-size:4rem;
-	}
-
 	.course {
 		display: flex;
 		flex-direction: column;
@@ -425,7 +402,94 @@ footer .heading p {
 		padding: 0.5em 0;
 	}
 		
+	/*Thesis DESKTOP*/
+	#thesis-exhibits {
+		background-color: ghostwhite;
+	}
+		
+	.exhibits {
+		padding-left: 1.5rem;
+	}
+
+	.exhibit {
+		width:55%;
+	}
 	
+	.exhibit .info h3 {
+			padding: 1.5rem 0 0 0.5rem;
+			font-size: 1.5rem;
+	}
+	
+	.exhibit .info p {
+		padding: 1.5rem 0.5em;
+	}
+	
+	.side {
+		display: flex;
+		flex-direction: column;
+		padding-left:1.5rem;
+		width: 45%;
+	}
+	
+	.sub-exhibit {
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.sub-exhibit img {
+		overflow:hidden;
+		padding: 1rem;
+		width: 40%;
+		height: 150px;
+	}
+	
+	.side .sub-content {
+		padding-bottom:2rem;
+		width: 60%;
+	}
+	
+	.sub-content h2 {
+		font-size: 1.5rem;
+		padding:2rem 1rem;
+	}
+	
+	.sub-content p {
+		padding:0 1.5rem;
+	}
+	
+	.side div:first-child{
+		background-color: lightgray;
+	}
+	
+	video {
+		padding: 0;
+		width: 100%;
+	}
+	
+	/*Footer DESKTOP*/
+	footer {
+		background-color:ghostwhite;
+		border-top:0.5px solid lightgray;
+	}
+	
+	.row {
+		display:flex;
+		flex-direction: row;
+	}
+	
+	footer .row {
+		justify-content: flex-end;
+		padding: 4.5rem 1.5rem;
+	}
+
+	footer .heading {
+		font-size:1rem;
+	}
+
+	footer .heading p {
+		padding-left:0;
+	}
+
 	
 }
 
