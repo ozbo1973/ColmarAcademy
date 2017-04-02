@@ -4,6 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Colmar Academy</title>
 
+<link href="./resources/img/favicon.ico" rel="icon" type="image/x-icon" />
+
 <!-- Link Css -->
 <link href="./resources/css/reset.css" type="text/css" rel="stylesheet" />
 <link href="./resources/css/style.css" type="text/css" rel="stylesheet" />
@@ -17,17 +19,19 @@
     <header class="content">
      <!--Navigation -->
       <nav>
-      	<div class="nav-desktop">
-        	<div class="logo">
+      <!--desktop -->
+      	<div class="desk-only">
+        
+        <!--logo -->
+        	<div class="flex-center-items">
         		<a href="#"><img src="./resources/img/ic-logo.svg" alt="" /></a>
-            <div class="logo-text">
+            <div class="headings">
             	<span>COLMAR</span> ACADEMY
         		</div>
           </div>
-        
            
       <!--desktop nav-->
-        	<ul>
+        	<ul class="flex-center-items">
           	<li><a href="#">On campus</a></li>
           	<li><a href="#">Online</a></li>
           	<li><a href="#">or companies</a></li>
@@ -36,7 +40,7 @@
        	</div>
         
        <!--mobile -->
-         <ul class="nav-mobile">
+         <ul class="nav-mobile flex-center-items">
           	<li><a href="#"><img src="./resources/img/ic-logo.svg" alt="" /></a></li>
           	<li><a href="#"><img src="./resources/img/ic-on-campus.svg" alt="" /></a></li>
           	<li><a href="#"><img src="./resources/img/ic-online.svg" alt="" /></a></li>
@@ -46,15 +50,13 @@
     </header>
     
    <!--banner content -->
-    <section id="main-banner" class="content banner">
-    	<div class="banner-img"> 
+    <section id="banner" class="content col">
     		<img src="./resources/img/banner.jpg" alt="" />
-  		</div>
-      <div class="banner-info">
+      <div class="headings side col">
       	<h1>Learn something new everyday</h1>
         <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-        <div class="banner-start">
-        	Start here
+        <div class="btn">
+        	<h3>Start here</h3>
         </div>
       </div>
     </section>
