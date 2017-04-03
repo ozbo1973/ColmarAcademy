@@ -233,40 +233,38 @@ section .headings-main h1{
 /*#### FEATURES #### */
 /*MOBILE */
 
-.features {
+#featured .side {
 	margin: 0 auto;
-	display:flex;
-	flex-direction: column;
+	width: 100%;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.feature {
+#featured .item {
 	overflow:hidden;
 	width: 85%;
 	padding: 2rem;
 }
 
-.feature .mobile-img {
-	/*padding: 1.5em;*/
+#featured .item img {
 	width: 100%;
 }
 
-.feature-text {
+#featured .item .headings {
 	padding-left: 2.5em;
 }
 
-.feature-text h2 {
-	font-size: 3rem;
+#featured .item .headings h2 {
+	font-size: 2.5rem;
 	padding: 0.5em;
 }
 
-.feature-text p {
-	font-size: 2rem;
+#featured .item .headings p{
+	font-size: 1.8rem;
 	padding: 0.5em;
 }
 
-.feature-text .read {
+#featured .item .headings span {
 	font-size: 2rem;
 	color: lightblue;
 	padding: 0.5em;
@@ -275,57 +273,64 @@ section .headings-main h1{
 /* FEATURES DESKTOP */
 @media only screen and (min-width: 767px) {
 	#featured {
-		display: flex;
-		flex-direction:row;
 		height: 600px;
 	}
 	
-	.features-desktop {
-		display:flex;
-		flex-direction:column;
-		padding:2rem 1.5rem;
+	#featured.col{
+		flex-direction:row;
+	}
+	
+	#featured div.desk-only {
+		padding:2rem 1rem;
 		width:55%;
 	}
 	
-	.features-desktop img {
+	#featured .side {
+		padding: 2rem 0;
+	}
+		
+	#featured .desk-only img {
 		overflow:hidden;
 	}
 	
-	.features-desktop .heading h1 {
+	#featured .desk-only .headings h1 {
 		font-size: 3rem;
 		padding: 2rem 0 1.5rem 0;
 	}
 		
-	.features-desktop .heading h5 {
+	#featured .desk-only .headings h5 {
 		padding-top:2rem;
 	}
 	
-	.desk-img {
+	#featured .side img.desk-only {
 		display: inline;
 		padding: 1rem;
 		width:35%;
 	}
 
-
-	.feature {
+	#featured .side .item {
 		display: flex;
 		flex-direction: row;
 		padding:0;
 		align-items:center;
-		
 	}
 	
-	.feature-text {
+	#featured .side .item:nth-child(3n+0) {
+		background-color: gainsboro;
+	}
+	
+	#featured .side .headings {
 		padding-left: 0;
 	}
 
-	.feature-text h2 {
-		font-size: 1.5rem;
+	#featured .side .headings h2 {
+		font-size: 2rem;
 	}
 
-	.feature-text p, .feature-text .read {
-		font-size: 1rem;
+	#featured .side .headings p, #featured .side .headings span {
+		font-size: 1.5rem;
 	}
+	
 }
 
 /*#### COURSES ####*/
@@ -404,74 +409,66 @@ section .headings-main h1{
 /*#### THESIS EXHIBITS ####*/
 /* MOBILE */
 
-.exhibits {
-	display: flex;
-	flex-direction: row;
-/*	justify-content: center;
-	align-items: center;*/
-}
-
 video {
 	padding: 3em 0;
 	width: 100%;
 }
+
 /* THESIS DESKTOP */
 @media only screen and (min-width:767px) {	
-	.exhibits {
+	
+	#thesis-exhibits {
+		
+	}
+	
+	#thesis-exhibits .main {
 		padding-left: 1.5rem;
 	}
-
-	.exhibit {
+	
+	#thesis-exhibits .main .col {
 		width:55%;
 	}
 	
-	.exhibit .info h3 {
-			padding: 1.5rem 0 0 0.5rem;
-			font-size: 1.5rem;
+	#thesis-exhibits .main .headings h2{
+		padding: 1.5rem 0 0 0.5rem;
+		font-size: 1.5rem;
 	}
 	
-	.exhibit .info p {
+	#thesis-exhibits .main .headings p{
 		padding: 1.5rem 0.5em;
 	}
-	
-	.side {
-		display: flex;
-		flex-direction: column;
+		
+	#thesis-exhibits .side {
 		padding-left:1.5rem;
-		width: 45%;
 	}
 	
-	.sub-exhibit {
-		display: flex;
-		flex-direction: row;
+	#thesis-exhibits .side div:first-child{
+		background-color: lightgray;
 	}
 	
-	.sub-exhibit img {
-		overflow:hidden;
-		padding: 1rem;
-		width: 40%;
-		height: 150px;
-	}
-	
-	.side .sub-content {
+	#thesis-exhibits .side .item .headings {
 		padding-bottom:2rem;
 		width: 60%;
 	}
 	
-	.sub-content h2 {
+	#thesis-exhibits .side .item img {
+		overflow:hidden;
+		padding: 1rem;
+		width: 35%;
+		height: 150px;
+	}
+	
+	#thesis-exhibits .side .item h2 {
 		font-size: 1.5rem;
 		padding:2rem 1rem;
 	}
 	
-	.sub-content p {
+	#thesis-exhibits .side .item p {
 		padding:0 1.5rem;
 	}
 	
-	.side div:first-child{
-		background-color: lightgray;
-	}
 	
-	video {
+	#thesis-exhibits video {
 		padding: 0;
 		width: 100%;
 	}
@@ -483,12 +480,12 @@ footer {
 	background-color:ghostwhite;
 }
 
-footer .heading {
+footer .headings {
 	font-size: 2.5rem;
 	padding: 2.5em 0;
 }
 
-footer .heading p {
+footer .headings p {
 	padding-left: 2.5em;
 }
 
@@ -503,7 +500,7 @@ footer .heading p {
 		padding: 4.5rem 1.5rem;
 	}
 	
-	footer .heading {
+	footer .main {
 		font-size:1rem;
 		width: 80%;
 		padding: 0;
@@ -515,11 +512,11 @@ footer .heading p {
 		padding:2rem;
 	}
 	
-	footer .heading, footer .side{
+	footer .main, footer .side{
 		padding: 1rem 0.5rem;
 	}
 
-	footer .heading p,footer span {
+	footer .main p,footer .side span {
 		padding:1rem;
 	}
 	
@@ -533,7 +530,7 @@ footer .heading p {
 
 @media only screen and (max-width:767px){
 	/*hidden for desk*/
-	.features-desktop, .desk-img, .course img, .course .course-content, .desk-only {
+	.course img, .course .course-content, .desk-only {
 		display:none;
 	}
 	
@@ -541,7 +538,7 @@ footer .heading p {
 
 @media only screen and (min-width:767px) {
 		/*hidden mobile */
-	.nav-mobile, .mobile-img {
+	.nav-mobile, .mobile-only {
 		display:none;
 	}
 }

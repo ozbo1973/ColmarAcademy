@@ -93,5 +93,265 @@
         <h2>Marketing</h2>
       </div>
     </section>
+    
+    <!--css for features -->
+    <!--
+    /*#### FEATURES #### */
+/*MOBILE */
+
+.features {
+	margin: 0 auto;
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.feature {
+	overflow:hidden;
+	width: 85%;
+	padding: 2rem;
+}
+
+.feature .mobile-img {
+	/*padding: 1.5em;*/
+	width: 100%;
+}
+
+.feature-text {
+	padding-left: 2.5em;
+}
+
+.feature-text h2 {
+	font-size: 3rem;
+	padding: 0.5em;
+}
+
+.feature-text p {
+	font-size: 2rem;
+	padding: 0.5em;
+}
+
+.feature-text .read {
+	font-size: 2rem;
+	color: lightblue;
+	padding: 0.5em;
+}
+
+/* FEATURES DESKTOP */
+@media only screen and (min-width: 767px) {
+	#featured {
+		display: flex;
+		flex-direction:row;
+		height: 600px;
+	}
+	
+	.features-desktop {
+		display:flex;
+		flex-direction:column;
+		padding:2rem 1.5rem;
+		width:55%;
+	}
+	
+	.features-desktop img {
+		overflow:hidden;
+	}
+	
+	.features-desktop .heading h1 {
+		font-size: 3rem;
+		padding: 2rem 0 1.5rem 0;
+	}
+		
+	.features-desktop .heading h5 {
+		padding-top:2rem;
+	}
+	
+	.desk-img {
+		display: inline;
+		padding: 1rem;
+		width:35%;
+	}
+
+
+	.feature {
+		display: flex;
+		flex-direction: row;
+		padding:0;
+		align-items:center;
+		
+	}
+	
+	.feature-text {
+		padding-left: 0;
+	}
+
+	.feature-text h2 {
+		font-size: 1.5rem;
+	}
+
+	.feature-text p, .feature-text .read {
+		font-size: 1rem;
+	}
+}
+
+    
+     -->
+    <!--features working section -->
+     <!--features content -->
+    <section id="featured" class="content">
+    <!--desktop-->
+    	<div class="features-desktop">
+      	<img src="./resources/img/information-main.jpg" alt="" />
+        <div class="heading">
+        	<h1>It doesn't hurt to keep practicing</h1>
+          <p>"Phasellus nec ullamcorper dui. Nam in augue auctor, accumsan tellus eu, aliquam magna. In dictum ac nisi vitae egestas. Pellentesque ligula massa, venenatis ut massa nec, cursus dignissim leo. Vivamus ac finibus nunc, eleifend sodales turpis. Aliquam ac euismod velit."</p>
+          <h5>Emanual Sr. Strategist at Hiring.com</h5>
+        </div>
+      </div>
+     <!--orientation date -->
+      <div class="features">
+        <div id="orientation-date" class="feature">
+          <img src="./resources/img/information-orientation-mobile.jpg" class="mobile-img" alt="" />
+          <img src="./resources/img/information-orientation.jpg" class="desk-img" alt="" />
+          <div class="feature-text">
+            <h2>Orientation Date</h2>
+            <p>Tue 10/11 & Wed 10/12 8am - 3pm</p>
+            <span class="read">Read more</span>
+          </div>
+        </div>
+       <!--our campus -->
+        <div id="our-campus" class="feature">
+          <img src="./resources/img/information-campus-mobile.jpg" class="mobile-img" alt="" />
+          <img src="./resources/img/information-campus.jpg" class="desk-img" alt="" />
+          <div class="feature-text">
+            <h2>Our campus</h2>
+            <p>Find which campus is close by you</p>
+            <span class="read">Read more</span>
+          </div>
+        </div> 
+       <!--guest lecture -->
+        <div id="guest-lecture" class="feature">
+          <img src="./resources/img/information-guest-lecture-mobile.jpg" class="mobile-img" alt="" />
+          <img src="./resources/img/information-guest-lecture.jpg" class="desk-img" alt="" />
+          <div class="feature-text">
+            <h2>Special guest lecture</h2>
+            <p>Join a keynote with Oliver Sac about music in medical treatment</p>
+            <span class="read">Read more</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <!--Thesis working -->
+    <!--Thesis exhibits -->
+    <section id="thesis-exhibits" class="content col">
+    	<div class="headings-main">
+      	<h1>Thesis exhibits</h1>      	
+      </div>
+      <div class="exhibits">
+      	<div class="exhibit">
+      		<video src="./resources/videos/thesis.mp4" autoplay loop></video>
+          <div class="headings desk-only">
+          	<h2>Reimagine Urban</h2>
+            <p>Phasellus nec ullamcorper dui. Nam in augue auctor, accumsan tellus eu, aliquam magna. In dictum ac nisi vitae egestas. Pellentesque ligula massa, venenatis ut massa nec, cursus dignissim leo. Vivamus ac finibus nunc, eleifend sodales turpis. Aliquam ac euismod velit.</p>
+          </div>
+    		</div>
+        
+        <div class="side desk-only">
+        	<div class="sub-exhibit">
+          	<img src="./resources/img/thesis-fisma.jpg" alt="" />
+            <div class="sub-content">
+            	<h2>Fisma: Design and</h2>
+              <p>Designer showcase of the new prototype product</p>
+            </div>
+          </div>
+          
+          <div class="sub-exhibit">
+          	<img src="./resources/img/thesis-now-and-then.jpg" alt="" />
+            <div class="sub-content">
+            	<h2>Now and Then</h2>
+              <p>Research study about New York</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    
+    <!--
+    /* MOBILE */
+
+.exhibits {
+	display: flex;
+	flex-direction: row;
+}
+
+video {
+	padding: 3em 0;
+	width: 100%;
+}
+/* THESIS DESKTOP */
+@media only screen and (min-width:767px) {	
+	.exhibits {
+		padding-left: 1.5rem;
+	}
+
+	.exhibit {
+		width:55%;
+	}
+	
+	.exhibit .info h3 {
+			padding: 1.5rem 0 0 0.5rem;
+			font-size: 1.5rem;
+	}
+	
+	.exhibit .info p {
+		padding: 1.5rem 0.5em;
+	}
+	
+	.side {
+		display: flex;
+		flex-direction: column;
+		padding-left:1.5rem;
+		width: 45%;
+	}
+	
+	.sub-exhibit {
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.sub-exhibit img {
+		overflow:hidden;
+		padding: 1rem;
+		width: 40%;
+		height: 150px;
+	}
+	
+	.side .sub-content {
+		padding-bottom:2rem;
+		width: 60%;
+	}
+	
+	.sub-content h2 {
+		font-size: 1.5rem;
+		padding:2rem 1rem;
+	}
+	
+	.sub-content p {
+		padding:0 1.5rem;
+	}
+	
+	#thesis-exhibits .side div:first-child{
+		background-color: lightgray;
+	}
+	
+	video {
+		padding: 0;
+		width: 100%;
+	}
+}
+     -->
 </body>
 </html>
