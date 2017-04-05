@@ -1,17 +1,73 @@
 @charset "utf-8";
 /* CSS Document */
 
+/*####COLOR SCHEME ####*/
+.color-primary-0 { color: #297A4A }	/* Main Primary color */
+.color-primary-1 { color: #618670 }
+.color-primary-2 { color: #6E9C81 }
+.color-primary-3 { color: #005824 }
+.color-primary-4 { color: #006E2D }
+
 /*#### COMMON ####*/
 body {
-	background-color: ghostwhite;	
+	background-color: ghostwhite;
+	font-size:12px;
+	color: black;	
+	font-family: 'Roboto', sans-serif;
 }
 
 header {
+	position: fixed;
+	width:100%;
+	background-color: ghostwhite;
+	border-width: 3px 0;
+	border-color:#6E9C81;
+	border-style: solid;
 	height: 64px;
+	z-index: 5;
+}
+
+nav {
+	padding: 1rem;
 }
 
 section {
 	display: block;
+	border: 1px solid #006E2D;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Share Tech', sans-serif;
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 2.5rem;
+	color: #005824;
+}
+
+h2 {
+	font-size:1.5rem;
+	color: black;
+}
+
+h3,h5 {
+	font-size: 1.3rem;
+	color: #297A4A;
+}
+
+a {
+	color: #005824;
+	text-decoration:none;
+}
+
+a:hover {
+	color: #6E9C81;
+	text-decoration: underline;
+}
+
+#banner {
+	padding-top: 64px;
 }
 
 .main-container {
@@ -19,38 +75,33 @@ section {
 	position: relative;
 }
 
+.headings-main {
+	padding-top: 2.4rem;
+	padding-bottom: 1.2rem;
+	text-align: center;
+	width: 100%;
+	font-size:4rem;
+}
+
 .content {
 	margin: 0 auto;
 }
 
-.headings {
-	font-weight:bold;
-}
-
-.headings h1{
-	font-size: 2.5rem;
-}
-
-.headings h2{
-	font-size: 1.5rem
-}
-
-.headings p {
-	font-size: 1rem;
-	font-weight:normal;
-}
-
-.flex-center-items{
-	display: flex;
-	align-items:center;
-}
-
 .btn {
-	background-color: gray;
-	border-radius: 5px;
+	background-color: #005824;
+	border-radius: 25px;
+	text-align: center;
+	color: ghostwhite;
 	font-size: 1.5rem;
-	color:white;
-	text-align: center;	
+	border:5px solid #6E9C81;
+	transition:all 750ms;
+}
+
+.btn:hover {
+	background-color: #6E9C81 ;
+	border:5px solid #005824;
+	cursor:pointer;
+	color: #005824;
 }
 
 .row {
@@ -70,91 +121,100 @@ section {
 
 
 /* MOBILE COMMON */
-html, body {
+/*html, body {
 	font-size:12px;
-}
+}*/
 
-nav {
+/*nav {
 	padding: 1rem;
-}
+}*/
 
-section .headings-main {
+/*section .headings-main {
 	padding-top: 2.4rem;
 	padding-bottom: 1.2rem;
 	text-align: center;
 	width: 100%;
-}
-
+}*/
+/*
 section .headings-main h1{
 		font-size:4rem;
-}
+}*/
 
 
-/*DESKTOP COMMON*/
+/*DESKTOP CHANGE COMMON*/
 
 @media only screen and(min-width:767px) {
 		/* elements */
 	html, body {
-		font-size:16px;
+		font-size:18px;
 	}
 	
 	/*resize headings*/
-	section .headings-main {
+	.headings-main {
 		padding-top: 2rem 0;
-	}
-
-	section .headings-main h1{
 		font-size:2rem;
 	}
+
+/*	.headings-main h1{
+		font-size:2rem;
+	}*/
 		
 }
 
 /*#### HEADER ####*/
 /*MOBILE*/
-.nav-mobile {
+nav .nav-mobile {
+	display: flex;
+	align-items:center;
 	justify-content: space-between;
 }
 
 /*#### HEADER -DESKTOP ####*/
 @media only screen and (min-width:767px) {
 	
-	nav .desk-only {
+	nav .main {
 		display:flex;
 		justify-content: center;
+		font-size: 1.5rem;
 	}
 	
-	nav .desk-only .flex-center-items {
+	nav .main .logo {
+		display: flex;
+		align-items:center;
 		justify-content: flex-start;
 		padding-left: 1.5rem;
-		width: 45%;
+		width: 50%;
 	}
 	
-	nav .desk-only img{
-		height: 2rem;
-		width: 2rem;
+	nav .main img{
+		height: 1.5em;
+		width: 1.5em;
 		padding-right: 1rem;
 	}
 	
-	nav .desk-only .headings{
+/*	nav .main .headings{
 		font-size: 2rem;
-	}
+	}*/
 		
-	nav .desk-only .headings span {
-		color: darkgray;
+	nav .main .headings span {
+		font-size: 1em;
+		font-family: 'Press Start 2P', cursive;
+		color: #005824;
 	}
 	
-	nav .desk-only ul.flex-center-items {
+	nav .main ul {
+		display: flex;
+		align-items:center;
 		justify-content:flex-end;
 		width: 100%;
 	}
 	
-	nav .desk-only ul li{
+	nav .main ul li{
 		padding: 	0 1rem;
 	}
 	
-	nav .desk-only li a{
+	nav .main li a{
 		font-size: 1.5rem;
-		text-decoration: none;
 	}
 
 }
@@ -163,7 +223,7 @@ section .headings-main h1{
 /*MOBILE */
 
 #banner {
-	background-color: silver;
+	background-color: lightgray;
 }
 	
 #banner img {
@@ -173,6 +233,8 @@ section .headings-main h1{
 }
 
 #banner .side {
+	justify-content:center;
+	align-items: center;
 	width: 100%
 }
 
@@ -182,7 +244,7 @@ section .headings-main h1{
 }
 
 #banner .headings h1 {
-	font-size: 3.5rem;
+	/*font-size: 3.5rem;*/
 	margin-bottom: 2.5rem;
 }
 
@@ -192,7 +254,7 @@ section .headings-main h1{
 
 #banner .btn {
 	width: 80%;
-	padding: 1em 0;
+	padding: 0.5em 0;
 }
 
 /* BANNER DESKTOP */
@@ -208,9 +270,11 @@ section .headings-main h1{
 	
 	#banner img {
 		margin:0;
-		padding: 2rem 1rem 2rem 1.5rem;
+		padding: 1.5rem /*1.5rem 2rem 1.5rem*/;
 		height: auto;
 		width: 55%;
+		border: 2px solid #006E2D;
+		background-color: #6E9C81;
 	}
 	
 	#banner .side {
@@ -224,10 +288,13 @@ section .headings-main h1{
 	}
 
 	#banner .headings h2 {
-		margin-bottom: 1.5rem;
+		margin-bottom: 3rem;
 		width: 80%;
 	}
 	
+	/*#banner .btn {
+		margin-top: 3rem;
+	}*/
 }
 
 /*#### FEATURES #### */
@@ -255,17 +322,17 @@ section .headings-main h1{
 }
 
 #featured .item .headings h2 {
-	font-size: 2.5rem;
+	/*font-size: 2.5rem;*/
 	padding: 0.5em;
 }
 
 #featured .item .headings p{
-	font-size: 1.8rem;
+	font-size: 1.5em;
 	padding: 0.5em;
 }
 
 #featured .item .headings span {
-	font-size: 2rem;
+	font-size: 1.2rem;
 	color: lightblue;
 	padding: 0.5em;
 }
@@ -280,26 +347,31 @@ section .headings-main h1{
 		flex-direction:row;
 	}
 	
-	#featured div.desk-only {
+	#featured .main {
 		padding:2rem 1rem;
 		width:55%;
+	}
+		
+	#featured .main img {
+		overflow:hidden;
+		border: 2px solid #005824;
+	}
+	
+	#featured .main .headings h1 {
+		/*font-size: 3rem;*/
+		padding: 2rem 0 1.5rem 0;
+	}
+		
+	#featured .main .headings h5 {
+		padding-top:2rem;
+	}
+	
+	#featured .main p {
+		font-size: 1rem;
 	}
 	
 	#featured .side {
 		padding: 2rem 0;
-	}
-		
-	#featured .desk-only img {
-		overflow:hidden;
-	}
-	
-	#featured .desk-only .headings h1 {
-		font-size: 3rem;
-		padding: 2rem 0 1.5rem 0;
-	}
-		
-	#featured .desk-only .headings h5 {
-		padding-top:2rem;
 	}
 	
 	#featured .side img.desk-only {
@@ -316,7 +388,12 @@ section .headings-main h1{
 	}
 	
 	#featured .side .item:nth-child(3n+0) {
-		background-color: gainsboro;
+		background-color: #6E9C81;
+		border:1px solid #005824;
+	}
+	
+	#featured .side .item:nth-child(3n+0) span a{
+		color: lightblue;
 	}
 	
 	#featured .side .headings {
@@ -324,36 +401,49 @@ section .headings-main h1{
 	}
 
 	#featured .side .headings h2 {
-		font-size: 2rem;
+		/*font-size: 2rem;*/
 	}
-
+	
 	#featured .side .headings p, #featured .side .headings span {
-		font-size: 1.5rem;
+		/*font-size: 1rem;*/
 	}
 	
 }
 
 /*#### COURSES ####*/
 /*MOBILE */
-.courses {
-	margin: 0 auto;
+
+#start-learning .main {
 	display: flex;
 	flex-direction: column;
+	margin: 0 auto;
 	justify-content: space-between;
 	align-items: center;
 	padding: 2rem;
 }
 
-.course {
+#start-learning .main .item {
 	margin: 0 2rem 1rem 2rem;
 	padding: 4rem;
-	background-color: lightgray;
+	background-color: #6E9C81;
 	width: 65%;
+	border: 2px solid #005824;
 }
 
-.course h2 {
-	font-size: 3rem;
+#start-learning .main .item:hover{
+	background-color: #005824;
+	border: 2px solid #6E9C81;
+	
+}
+
+#start-learning .main .item h2 {
+	font-size: 2.5rem;
 	padding-left: 2rem;
+}
+
+#start-learning .main .item h2:hover {
+	color: lightblue;
+	cursor: pointer;
 }
 
 /* COURSES DESKTOP */
@@ -363,14 +453,14 @@ section .headings-main h1{
 		padding-bottom: 2rem;
 	}
 	
-	.courses {
+	#start-learning .main {
 		flex-direction: row;
 		flex-wrap:wrap;
 		padding: 0;
 		width: 80%;
 	}
 
-	.course {
+	#start-learning .main .item , #start-learning .main .item:hover{
 		display: flex;
 		flex-direction: column;
 		margin: 0.5rem;
@@ -378,31 +468,40 @@ section .headings-main h1{
 		background-color: white;
 		width: 25%;
 		height:250px;
+		border: 2px solid #006E2D;
+		border-radius: 10px;
 	}
 	
-	.course img {
+	#start-learning .main .item img {
 		display:block;
 		height:35%;
 		width:100%;
+		border-bottom: thin solid #006E2D;
 	}
 	
-	.course h2 {
+	#start-learning .main .item h2,#start-learning .main .item h2:hover {
 		margin-top: 1rem;
 		font-size: 1.5rem;
 		padding-left: 0.5rem;
+		font-weight: bold;
+		color: black;
+		cursor:default;
 	}
 	
-	.course .course-content{
+	#start-learning .main .item .headings{
 		display:block;
 		padding: 0.5rem 1rem 1rem 1.5rem;
-		font-size: 1em;
-		color: darkgray;
 	}
 		
-	.course-content h3 {
-		font-size: 1em;
+	#start-learning .main .item .headings h3 {
+		font-size: 1.5em;
 		text-transform: uppercase;
 		padding: 0.5em 0;
+	}
+	
+	#start-learning .main .item .headings p {
+		font-size: 1.2em;
+		color: black;
 	}
 }
 
@@ -417,10 +516,6 @@ video {
 /* THESIS DESKTOP */
 @media only screen and (min-width:767px) {	
 	
-	#thesis-exhibits {
-		
-	}
-	
 	#thesis-exhibits .main {
 		padding-left: 1.5rem;
 	}
@@ -431,11 +526,11 @@ video {
 	
 	#thesis-exhibits .main .headings h2{
 		padding: 1.5rem 0 0 0.5rem;
-		font-size: 1.5rem;
 	}
 	
 	#thesis-exhibits .main .headings p{
 		padding: 1.5rem 0.5em;
+		font-size: 1rem;
 	}
 		
 	#thesis-exhibits .side {
@@ -443,7 +538,8 @@ video {
 	}
 	
 	#thesis-exhibits .side div:first-child{
-		background-color: lightgray;
+		background-color: #6E9C81;
+		border:1px solid #005824;
 	}
 	
 	#thesis-exhibits .side .item .headings {
@@ -459,7 +555,6 @@ video {
 	}
 	
 	#thesis-exhibits .side .item h2 {
-		font-size: 1.5rem;
 		padding:2rem 1rem;
 	}
 	
@@ -471,6 +566,7 @@ video {
 	#thesis-exhibits video {
 		padding: 0;
 		width: 100%;
+		border: 1px solid #6E9C81;
 	}
 }
 
@@ -480,7 +576,7 @@ footer {
 	background-color:ghostwhite;
 }
 
-footer .headings {
+footer .main {
 	font-size: 2.5rem;
 	padding: 2.5em 0;
 }
@@ -501,7 +597,7 @@ footer .headings p {
 	}
 	
 	footer .main {
-		font-size:1rem;
+		font-size:1.5rem;
 		width: 80%;
 		padding: 0;
 	}
@@ -520,8 +616,8 @@ footer .headings p {
 		padding:1rem;
 	}
 	
-	footer span a {
-		text-decoration:none;
+	footer .side a {
+		font-size: 1.2rem;
 	}
 	
 }
@@ -530,7 +626,7 @@ footer .headings p {
 
 @media only screen and (max-width:767px){
 	/*hidden for desk*/
-	.course img, .course .course-content, .desk-only {
+	.desk-only {
 		display:none;
 	}
 	
@@ -538,7 +634,7 @@ footer .headings p {
 
 @media only screen and (min-width:767px) {
 		/*hidden mobile */
-	.nav-mobile, .mobile-only {
+	nav .nav-mobile, .mobile-only {
 		display:none;
 	}
 }
