@@ -12,7 +12,7 @@
 body {
 	background-color: ghostwhite;
 	font-size:12px;
-	color: black;
+	color: black;	
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -119,19 +119,46 @@ a:hover {
 	width: 45%;
 }
 
+
+/* MOBILE COMMON */
+/*html, body {
+	font-size:12px;
+}*/
+
+/*nav {
+	padding: 1rem;
+}*/
+
+/*section .headings-main {
+	padding-top: 2.4rem;
+	padding-bottom: 1.2rem;
+	text-align: center;
+	width: 100%;
+}*/
+/*
+section .headings-main h1{
+		font-size:4rem;
+}*/
+
+
 /*DESKTOP CHANGE COMMON*/
 
 @media only screen and(min-width:767px) {
-
+		/* elements */
 	html, body {
 		font-size:18px;
 	}
-
+	
 	/*resize headings*/
 	.headings-main {
 		padding-top: 2rem 0;
 		font-size:2rem;
 	}
+
+/*	.headings-main h1{
+		font-size:2rem;
+	}*/
+		
 }
 
 /*#### HEADER ####*/
@@ -144,13 +171,13 @@ nav .nav-mobile {
 
 /*#### HEADER -DESKTOP ####*/
 @media only screen and (min-width:767px) {
-
+	
 	nav .main {
 		display:flex;
 		justify-content: center;
 		font-size: 1.5rem;
 	}
-
+	
 	nav .main .logo {
 		display: flex;
 		align-items:center;
@@ -158,30 +185,34 @@ nav .nav-mobile {
 		padding-left: 1.5rem;
 		width: 50%;
 	}
-
+	
 	nav .main img{
 		height: 1.5em;
 		width: 1.5em;
 		padding-right: 1rem;
 	}
-
+	
+/*	nav .main .headings{
+		font-size: 2rem;
+	}*/
+		
 	nav .main .headings span {
 		font-size: 1em;
 		font-family: 'Press Start 2P', cursive;
 		color: #005824;
 	}
-
+	
 	nav .main ul {
 		display: flex;
 		align-items:center;
 		justify-content:flex-end;
 		width: 100%;
 	}
-
+	
 	nav .main ul li{
 		padding: 	0 1rem;
 	}
-
+	
 	nav .main li a{
 		font-size: 1.5rem;
 	}
@@ -194,7 +225,7 @@ nav .nav-mobile {
 #banner {
 	background-color: lightgray;
 }
-
+	
 #banner img {
 	margin: 0 auto;
 	height: 180px;
@@ -213,6 +244,7 @@ nav .nav-mobile {
 }
 
 #banner .headings h1 {
+	/*font-size: 3.5rem;*/
 	margin-bottom: 2.5rem;
 }
 
@@ -231,20 +263,20 @@ nav .nav-mobile {
 	#banner {
 		height: 600px;
 	}
-
+	
 	#banner.col {
 		flex-direction: row;
 	}
-
+	
 	#banner img {
 		margin:0;
-		padding: 1.5rem ;
+		padding: 1.5rem /*1.5rem 2rem 1.5rem*/;
 		height: auto;
 		width: 55%;
 		border: 2px solid #006E2D;
-		background-color: #297A4A;
+		background-color: #6E9C81;
 	}
-
+	
 	#banner .side {
 		justify-content: center;
 		padding-top: 2rem;
@@ -259,6 +291,10 @@ nav .nav-mobile {
 		margin-bottom: 3rem;
 		width: 80%;
 	}
+	
+	/*#banner .btn {
+		margin-top: 3rem;
+	}*/
 }
 
 /*#### FEATURES #### */
@@ -286,6 +322,7 @@ nav .nav-mobile {
 }
 
 #featured .item .headings h2 {
+	/*font-size: 2.5rem;*/
 	padding: 0.5em;
 }
 
@@ -305,37 +342,38 @@ nav .nav-mobile {
 	#featured {
 		height: 600px;
 	}
-
+	
 	#featured.col{
 		flex-direction:row;
 	}
-
+	
 	#featured .main {
 		padding:2rem 1rem;
 		width:55%;
 	}
-
+		
 	#featured .main img {
 		overflow:hidden;
 		border: 2px solid #005824;
 	}
-
+	
 	#featured .main .headings h1 {
+		/*font-size: 3rem;*/
 		padding: 2rem 0 1.5rem 0;
 	}
-
+		
 	#featured .main .headings h5 {
 		padding-top:2rem;
 	}
-
+	
 	#featured .main p {
 		font-size: 1rem;
 	}
-
+	
 	#featured .side {
 		padding: 2rem 0;
 	}
-
+	
 	#featured .side img.desk-only {
 		display: inline;
 		padding: 1rem;
@@ -348,19 +386,28 @@ nav .nav-mobile {
 		padding:0;
 		align-items:center;
 	}
-
+	
 	#featured .side .item:nth-child(3n+0) {
 		background-color: #6E9C81;
 		border:1px solid #005824;
 	}
-
+	
 	#featured .side .item:nth-child(3n+0) span a{
 		color: lightblue;
 	}
-
+	
 	#featured .side .headings {
 		padding-left: 0;
 	}
+
+	#featured .side .headings h2 {
+		/*font-size: 2rem;*/
+	}
+	
+	#featured .side .headings p, #featured .side .headings span {
+		/*font-size: 1rem;*/
+	}
+	
 }
 
 /*#### COURSES ####*/
@@ -386,7 +433,7 @@ nav .nav-mobile {
 #start-learning .main .item:hover{
 	background-color: #005824;
 	border: 2px solid #6E9C81;
-
+	
 }
 
 #start-learning .main .item h2 {
@@ -405,7 +452,7 @@ nav .nav-mobile {
 		background-color: lightgray;
 		padding-bottom: 2rem;
 	}
-
+	
 	#start-learning .main {
 		flex-direction: row;
 		flex-wrap:wrap;
@@ -424,14 +471,14 @@ nav .nav-mobile {
 		border: 2px solid #006E2D;
 		border-radius: 10px;
 	}
-
+	
 	#start-learning .main .item img {
 		display:block;
 		height:35%;
 		width:100%;
 		border-bottom: thin solid #006E2D;
 	}
-
+	
 	#start-learning .main .item h2,#start-learning .main .item h2:hover {
 		margin-top: 1rem;
 		font-size: 1.5rem;
@@ -440,18 +487,18 @@ nav .nav-mobile {
 		color: black;
 		cursor:default;
 	}
-
+	
 	#start-learning .main .item .headings{
 		display:block;
 		padding: 0.5rem 1rem 1rem 1.5rem;
 	}
-
+		
 	#start-learning .main .item .headings h3 {
 		font-size: 1.5em;
 		text-transform: uppercase;
 		padding: 0.5em 0;
 	}
-
+	
 	#start-learning .main .item .headings p {
 		font-size: 1.2em;
 		color: black;
@@ -467,55 +514,55 @@ video {
 }
 
 /* THESIS DESKTOP */
-@media only screen and (min-width:767px) {
-
+@media only screen and (min-width:767px) {	
+	
 	#thesis-exhibits .main {
 		padding-left: 1.5rem;
 	}
-
+	
 	#thesis-exhibits .main .col {
 		width:55%;
 	}
-
+	
 	#thesis-exhibits .main .headings h2{
 		padding: 1.5rem 0 0 0.5rem;
 	}
-
+	
 	#thesis-exhibits .main .headings p{
 		padding: 1.5rem 0.5em;
 		font-size: 1rem;
 	}
-
+		
 	#thesis-exhibits .side {
 		padding-left:1.5rem;
 	}
-
+	
 	#thesis-exhibits .side div:first-child{
 		background-color: #6E9C81;
 		border:1px solid #005824;
 	}
-
+	
 	#thesis-exhibits .side .item .headings {
 		padding-bottom:2rem;
 		width: 60%;
 	}
-
+	
 	#thesis-exhibits .side .item img {
 		overflow:hidden;
 		padding: 1rem;
 		width: 35%;
 		height: 150px;
 	}
-
+	
 	#thesis-exhibits .side .item h2 {
 		padding:2rem 1rem;
 	}
-
+	
 	#thesis-exhibits .side .item p {
 		padding:0 1.5rem;
 	}
-
-
+	
+	
 	#thesis-exhibits video {
 		padding: 0;
 		width: 100%;
@@ -543,24 +590,24 @@ footer .headings p {
 	footer {
 		border-top:0.5px solid lightgray;
 	}
-
-
+	
+	
 	footer .row {
 		padding: 4.5rem 1.5rem;
 	}
-
+	
 	footer .main {
 		font-size:1.5rem;
 		width: 80%;
 		padding: 0;
 	}
-
+	
 	footer .side {
 		display: block;
 		text-align:right;
 		padding:2rem;
 	}
-
+	
 	footer .main, footer .side{
 		padding: 1rem 0.5rem;
 	}
@@ -568,11 +615,11 @@ footer .headings p {
 	footer .main p,footer .side span {
 		padding:1rem;
 	}
-
+	
 	footer .side a {
 		font-size: 1.2rem;
 	}
-
+	
 }
 
 /* ##### Hidden #### */
@@ -582,7 +629,7 @@ footer .headings p {
 	.desk-only {
 		display:none;
 	}
-
+	
 }
 
 @media only screen and (min-width:767px) {
